@@ -1,4 +1,4 @@
-local group = vim.api.nvim_create_augroup("augroup", { clear = true })
+local group = vim.api.nvim_create_augroup("CalAutocmds", { clear = true })
 local cmd = require("cal.mapping").cmd
 
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_autocmd("BufWinEnter", {
+    group = group,
     callback = function()
         if vim.bo.filetype:match("^dap") then
             vim.wo.cursorline = false
