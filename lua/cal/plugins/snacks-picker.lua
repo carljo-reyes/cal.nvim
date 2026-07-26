@@ -1,3 +1,9 @@
+local pick = function(picker)
+  return function()
+    require("snacks.picker").pick(picker)
+  end
+end
+
 return {
   {
     "folke/snacks.nvim",
@@ -14,16 +20,16 @@ return {
     keys = {
       {
         "<Leader>ct",
-        function()
-          Snacks.picker.pick("filetypes")
-        end,
+        pick("filetypes"),
         desc = "Change filetype",
       },
       {
+        "<Leader>h",
+        pick("help"),
+      },
+      {
         "<Space><Space>",
-        function()
-          Snacks.picker()
-        end,
+        pick(),
       },
     },
   },
