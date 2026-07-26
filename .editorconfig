@@ -1,0 +1,8 @@
+# EditorConfig is awesome: https://EditorConfig.org
+# Unix-style newlines with a newline ending every file
+[*]
+insert_final_newline = true
+
+[*.lua]
+indent_style = space
+indent_size = 2
