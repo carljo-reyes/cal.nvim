@@ -28,6 +28,10 @@ return {
         pick("help"),
       },
       {
+        "<Leader>o",
+        pick("files"),
+      },
+      {
         "<Space><Space>",
         pick(),
       },
